@@ -60,7 +60,7 @@ namespace IngameDebugConsole
 			}
 			else
 			{
-				logText.horizontalOverflow = HorizontalWrapMode.Overflow;
+				logText.horizontalOverflow = HorizontalWrapMode.Wrap;
 				size.y = manager.ItemHeight;
 			}
 			transformComponent.sizeDelta = size;

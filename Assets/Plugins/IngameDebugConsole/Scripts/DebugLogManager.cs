@@ -429,6 +429,9 @@ namespace IngameDebugConsole
 			logWindowCanvasGroup.interactable = true;
 			logWindowCanvasGroup.blocksRaycasts = true;
 			logWindowCanvasGroup.alpha = 1f;
+			if (!string.IsNullOrEmpty(commandInputField.text) && commandInputField.text[commandInputField.text.Length - 1] == '`')
+				commandInputField.text = commandInputField.text.GetFirst(commandInputField.text.Length - 1);
+			commandInputField.ActivateInputField();
 
 			popupManager.Hide();
 
@@ -445,6 +448,7 @@ namespace IngameDebugConsole
 			logWindowCanvasGroup.interactable = false;
 			logWindowCanvasGroup.blocksRaycasts = false;
 			logWindowCanvasGroup.alpha = 0f;
+			commandInputField.DeactivateInputField();
 
 			popupManager.Show();
 
