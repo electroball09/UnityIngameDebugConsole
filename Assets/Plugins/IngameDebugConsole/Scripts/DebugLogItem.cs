@@ -55,12 +55,12 @@ namespace IngameDebugConsole
 			Vector2 size = transformComponent.sizeDelta;
 			if( isExpanded )
 			{
-				logText.horizontalOverflow = HorizontalWrapMode.Wrap;
+				//logText.horizontalOverflow = HorizontalWrapMode.Wrap;
 				size.y = manager.SelectedItemHeight;
 			}
 			else
 			{
-				logText.horizontalOverflow = HorizontalWrapMode.Wrap;
+				//logText.horizontalOverflow = HorizontalWrapMode.Wrap;
 				size.y = CalculateExpandedHeight(logEntry.logString);
 			}
 			transformComponent.sizeDelta = size;
@@ -118,7 +118,7 @@ namespace IngameDebugConsole
 			logText.text = text;
 			logText.horizontalOverflow = wrapMode;
 
-			return Mathf.Max( manager.ItemHeight, result );
+			return Mathf.Max(manager.ItemHeight, result);
 		}
 
 		// Return a string containing complete information about the debug entry
