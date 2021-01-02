@@ -218,6 +218,14 @@ namespace IngameDebugConsole
 				return;
 			}
 
+			CursorDefault.ConsoleToggled += (isOpen) =>
+			{
+				if( !isOpen )
+					ShowPopup();
+				else
+					ShowLogWindow();
+			};
+
 			pooledLogEntries = new List<DebugLogEntry>( 16 );
 			pooledLogItems = new List<DebugLogItem>( 16 );
 			queuedLogEntries = new DynamicCircularBuffer<QueuedDebugLogEntry>( 16 );
@@ -379,10 +387,7 @@ namespace IngameDebugConsole
 			{
 				if( Input.GetKeyDown( toggleKey ) )
 				{
-					if( isLogWindowVisible )
-						ShowPopup();
-					else
-						ShowLogWindow();
+					
 				}
 			}
 
