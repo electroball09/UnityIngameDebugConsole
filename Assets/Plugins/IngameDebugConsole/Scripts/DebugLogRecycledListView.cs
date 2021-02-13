@@ -151,6 +151,11 @@ namespace IngameDebugConsole
 
 		private void CalculateContentHeight()
 		{
+			float h = deltaHeightOfSelectedLogEntry;
+			foreach (KeyValuePair<int, DebugLogItem> kvp in logItemsAtIndices)
+			{
+				h += kvp.Value.CalculateExpandedHeight(kvp.Value.logEntry.logString);
+			}
 			float newHeight = Mathf.Max( 1f, indicesOfEntriesToShow.Count * logItemHeight + deltaHeightOfSelectedLogEntry );
 			transformComponent.sizeDelta = new Vector2( 0f, newHeight );
 		}

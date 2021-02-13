@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Management.Instrumentation;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 #if UNITY_EDITOR
@@ -34,7 +35,7 @@ namespace IngameDebugConsole
 #pragma warning restore 0649
 
 		// Debug entry to show with this log item
-		private DebugLogEntry logEntry;
+		public DebugLogEntry logEntry;
 
 		// Index of the entry in the list of entries
 		private int entryIndex;
@@ -61,7 +62,8 @@ namespace IngameDebugConsole
 			else
 			{
 				//logText.horizontalOverflow = HorizontalWrapMode.Wrap;
-				size.y = CalculateExpandedHeight(logEntry.logString);
+				//size.y = CalculateExpandedHeight(logEntry.logString);
+				size.y = manager.ItemHeight;
 			}
 			transformComponent.sizeDelta = size;
 
@@ -111,7 +113,7 @@ namespace IngameDebugConsole
 			HorizontalWrapMode wrapMode = logText.horizontalOverflow;
 
 			logText.text = content;
-			logText.horizontalOverflow = HorizontalWrapMode.Wrap;
+			logText.horizontalOverflow = HorizontalWrapMode.Overflow;
 
 			float result = logText.preferredHeight;
 

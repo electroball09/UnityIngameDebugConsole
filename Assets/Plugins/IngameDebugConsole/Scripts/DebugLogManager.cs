@@ -295,7 +295,7 @@ namespace IngameDebugConsole
 
 		private void OnDisable()
 		{
-			if( instance != this )
+			if( instance != this ) 
 				return;
 
 			// Stop receiving debug entries

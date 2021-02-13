@@ -1,0 +1,19 @@
+{
+    "name": "IngameDebugConsole",
+    "references": [
+        "GUID:6611e60c252b334408d9d2adf78c4c14",
+        "GUID:df44f0d0db80dbb48a3f5f00ec0f825a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "Android",
+        "iOS"
+    ],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

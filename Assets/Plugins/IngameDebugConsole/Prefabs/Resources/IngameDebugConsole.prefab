@@ -779,7 +779,7 @@ MonoBehaviour:
   commandHistorySize: 50
   receiveLogcatLogsInAndroid: 0
   logcatArguments: 
-  logItemPrefab: {fileID: 11408050, guid: 6e4ba44b36900d941b8259bab8f4f1eb, type: 3}
+  logItemPrefab: {fileID: 11408050, guid: f32e94ec2ac762549aa5198587cdbc4d, type: 3}
   infoLog: {fileID: 21300000, guid: 5a97d5afa6254804f81b7ba956296996, type: 3}
   warningLog: {fileID: 21300000, guid: 05c7216c78d4dd34ebe2bac9c1e274d7, type: 3}
   errorLog: {fileID: 21300000, guid: 66305a19e3614694f868c75a982e6b68, type: 3}
